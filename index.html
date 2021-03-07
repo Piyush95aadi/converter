@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Temperature Converter</title>
+    <meta name="description" content="Basic HTML boilerplate" />
+    <meta name="author" content="Piyush Kumar" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Your content goes here -->
+    <div class="container flex">
+        <div class="card flex flex-direction-column">
+            <div class="row flex width-100 ">
+                <p class="title width-100">Temperature Converter</p>
+            </div>
+            <div class="row flex">
+                <div class="flex flex-direction-column width-50">
+                    <label class="input-label-custom" for="#input-temperature">Temperature</label>
+                    <input class="input-custom" type="number" placeholder="" name="input-temperature" id="input-temperature" value="">
+                </div>
+                <div class="flex flex-direction-column width-50">
+                    <label class="input-label-custom" for="temperature-unit-selection">Unit</label>
+                    <select class="input-custom" name="temperature-unit-selection" id="temperature-unit-selection" onchange="toggleUnit(this.value)">
+                        <option value="1">Celius</option>
+                        <option value="2">Fahrenheit</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row flex">
+                <div class="flex flex-direction-column width-100 relative">
+                    <label class="input-label-custom" for="result-value">Result</label>
+                    <input type="number" class="input-custom" name="result-value" id="result-value" value="23">
+                    <!-- <p class="result-value">23</p> -->
+                    <span class="result-unit"><sup>o</sup>F</span>
+                </div>
+            </div>
+            <div class="row flex button-row width-100">
+                <button class="convert-button" onclick="converter()">Convert</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
