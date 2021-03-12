@@ -1,8 +1,5 @@
 /**
- * Temperature converter
- * @param {number} temperatureValue - Temperature value to be converted
- * @param {number} temperatureUnit - Current temperature unit
- * @returns {object} {temperature: number, unit: string}
+ * Convert the temperature into 1-dergree celcius / 2-degree Fahrenheit
  */
 const converter = () => {
     let temperatureValue = document.getElementById("input-temperature").value;
@@ -21,10 +18,9 @@ const converter = () => {
 
 /**
  * Toggle temperature unit on the page
- * @param {*} currentTemperatureUnit -
+ * @param {*} currentTemperatureUnit - Current selected temperature unit 1-degree celcius/2-degree Fahrenheit
  */
 const toggleUnit = (currentTemperatureUnit) => {
-    console.log(currentTemperatureUnit, document.querySelector('.result-unit'))
     switch (parseInt(currentTemperatureUnit)) {
         case 1: console.info(`Converting temperature into Fahrenheit`);
                 document.querySelector('.result-unit').innerHTML = "<sup>o</sup>F";
